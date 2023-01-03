@@ -1,3 +1,104 @@
-body {
-  background-color: bisque;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
+}
+
+.nav {
+  background-color: #ffe200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+.nav .logo i {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.nav .navbar-nav {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-nav .nav-item {
+  margin: auto 2rem;
+  font-size: 1.3rem;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/* Card Section */
+.card-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card-wrapper .card {
+  background-color: #ffe200;
+  width: 25%;
+  margin: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+  border-radius: 1rem;
+  color: #fff;
+}
+
+.card-wrapper .card-header img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-header .meal-name {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-footer .button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.card-footer .button-wrapper > p {
+  margin-left: 1rem;
+}
+
+.card-footer p i#like-btn,
+.card-footer p i#comment-btn {
+  color: #f00;
+  font-size: 1.8rem;
+  transition: all 0.5s;
+}
+
+.card-footer p i#like-btn:hover,
+.card-footer p i#comment-btn:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.card-footer p i#like-btn:active,
+.card-footer p i#comment-btn:active {
+  color: #f30;
+}
+
+.like-total-box {
+  font-size: 1rem;
+}
+
+.like-total-box #like-total {
+  font-size: 1.3rem;
 }
