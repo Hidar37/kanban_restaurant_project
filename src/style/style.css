@@ -45,6 +45,11 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
   border-radius: 1rem;
   color: #fff;
+  transition: all 0.5s;
+}
+
+.card-wrapper .card:hover {
+  scale: 1.01;
 }
 
 .card-wrapper .card-header img {
@@ -77,21 +82,18 @@
   margin-left: 1rem;
 }
 
-.card-footer p i#like-btn,
-.card-footer p i#comment-btn {
+.card-footer p i.btn {
   color: #f00;
   font-size: 1.8rem;
   transition: all 0.5s;
 }
 
-.card-footer p i#like-btn:hover,
-.card-footer p i#comment-btn:hover {
+.card-footer p i.btn:hover {
   cursor: pointer;
   scale: 1.1;
 }
 
-.card-footer p i#like-btn:active,
-.card-footer p i#comment-btn:active {
+.card-footer p i.btn:active {
   color: #f30;
 }
 
