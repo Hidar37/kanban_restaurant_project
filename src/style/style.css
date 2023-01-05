@@ -105,7 +105,6 @@
   font-size: 1.3rem;
 }
 
-
 .footer {
   display: flex;
   flex-flow: row wrap;
@@ -116,7 +115,7 @@
 }
 
 .footer > * {
-  flex:  1 100%;
+  flex: 1 100%;
 }
 
 .footer__addr {
@@ -177,7 +176,7 @@
 
 .footer__nav {
   display: flex;
-	flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .footer__nav > * {
@@ -199,7 +198,7 @@
   flex-wrap: wrap;
   color: #999;
 }
-  
+
 .legal__links {
   display: flex;
   align-items: center;
@@ -219,16 +218,16 @@
   .footer__nav > * {
     flex: 1;
   }
-  
+
   .nav__item--extra {
     flex-grow: 2;
   }
-  
+
   .footer__addr {
-    flex: 1 0px;
+    flex: 1 0;
   }
-  
+
   .footer__nav {
-    flex: 2 0px;
+    flex: 2 0;
   }
 }
