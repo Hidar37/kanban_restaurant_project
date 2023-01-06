@@ -233,15 +233,14 @@
 }
 
 .modal {
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 30%;
   gap: 0.4rem;
   width: 450px;
   padding: 1.3rem;
   min-height: 200px;
   z-index: 2;
-  top: 20%;
+  top: 1%;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 15px;

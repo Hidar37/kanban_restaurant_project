@@ -23,18 +23,21 @@
   </section>
     <section class="modal hidden">
       <div class="flex">
-        <label><b>Food title</b></label>
+        <label><b id="ftt">Food title</b> <b class="cmnc"></b></label>
         <button class="btn-close">⨉</button>
       </div>
       <div>
-        <p>
-          Sample comments 1 <br>
-          Sample comments 2 ..... the food is so awsome and I love it... <br>
+        <img src="" class='imgs' id='imgs' width='400px' height='150px' alt="" srcset="">
+        <p class="comments">
+        </p>
+        <p class="errormessage">
         </p>
       </div>
       <br>
-      <input type="text" id="mess" placeholder="Enter a comment here" />
-      <button class="btn">Post</button>
+      <input type="text" id="name_" placeholder="Enter Your name" />
+      <input type="text" id="comment_" placeholder="Enter a comment here" />
+      <input type="hidden" id="hdvals" placeholder="Enter a comment here" />
+      <button class="btn btn-pst">Post</button>
     </section>
     
     <div class="overlay hidden"></div>
