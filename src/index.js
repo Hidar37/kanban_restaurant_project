@@ -6,9 +6,9 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const closeModalBtn = document.querySelector('.btn-close');
 const urlDataId = 'Lg1NwTSFJSG37nTmEN8x';
+const urlDataLikes = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${urlDataId}/likes/`;
 const urlDataPostComments = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${urlDataId}/comments/`;
 const urlDataGetComments = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${urlDataId}/comments?item_id=`;
-
 // close modal function
 const closeModal = function () {
   modal.classList.add('hidden');
@@ -135,7 +135,6 @@ const displayItems = () => {
       likeBtn.classList.add('fa-heart', 'btn');
       // Add Event for (like) btn
       likeBtn.addEventListener('click', (e) => {
-        console.log(e.target.id);
       });
       // comment
       const commentBox = document.createElement('p');
@@ -168,6 +167,7 @@ const displayItems = () => {
       const likeTotal = document.createElement('span');
       likeTotal.setAttribute('id', 'like-total');
       likeTotal.textContent = '5';
+      
       // Adding Created Elements in the page
       showAllDiv.appendChild(cardDiv);
       cardDiv.append(cardHeader, cardFooter);
