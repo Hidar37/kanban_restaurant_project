@@ -167,7 +167,9 @@ const displayItems = () => {
       likeTotalBox.textContent = 'Likes ';
       const likeTotal = document.createElement('span');
       likeTotal.setAttribute('id', 'like-total');
-      likeTotal.textContent = '5';
+      mealDB.countLikes().then((res) => {
+        likeTotal.textContent = `${res[0].likes}`;
+      });
       // Adding Created Elements in the page
       showAllDiv.appendChild(cardDiv);
       cardDiv.append(cardHeader, cardFooter);

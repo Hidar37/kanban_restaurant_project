@@ -9,4 +9,12 @@ export default class MealDbApi {
     const jsonItems = await items.json();
     return jsonItems;
   }
+
+  // **************************** Involvement API
+  // Display all like (count)
+  countLikes = async () => {
+    const items = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/70gcMHBzgP58BcMjkQhl/likes');
+    const jsonItems = await items.json();
+    return jsonItems;
+  }
 }
