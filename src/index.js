@@ -146,7 +146,7 @@ const displayItems = () => {
       commentBtn.classList.add('fa-comment', 'btn');
       // Add Event for(comment) btn
       commentBtn.addEventListener('click', (e) => {
-        let ids = e.target.id
+        const ids = e.target.id;
         openModal();
         const cmnc = document.querySelector('.cmnc');
         cmnc.innerHTML = '';
