@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Restaurant</title>
+  <!-- Fontawesome cdn -->
+  <script src="https://kit.fontawesome.com/27219c429c.js" crossorigin="anonymous"></script>
+<script defer src="main.js"></script></head>
+<body>
+  <nav class="nav">
+    <a href="" class="logo"><i class="fas fa-pizza-slice"></i></a>
+    <ul class="navbar-nav">
+      <li class="nav-item">Vegan(<span id="item_count"></span>)</li>
+      <li class="nav-item">Sea Food</li>
+      <li class="nav-item">Breakfast</li>
+    </ul>
+  </nav>
+  <!-- Show all cards -->
+  <section class="card-wrapper" id="card-wrapper">
+    <!-- All Card Apper Here Dynamically -->
+  </section>
+    <section class="modal hidden">
+      <div class="flex">
+        <label><b id="ftt">Food title</b> <b class="cmnc"></b></label>
+        <button class="btn-close">⨉</button>
+      </div>
+      <div>
+        <img src="" class='imgs' id='imgs' width='400px' height='150px' alt="" srcset="">
+        <p class="comments">
+        </p>
+        <p class="errormessage">
+        </p>
+      </div>
+      <br>
+      <input type="text" id="name_" placeholder="Enter Your name" />
+      <input type="text" id="comment_" placeholder="Enter a comment here" />
+      <input type="hidden" id="hdvals" placeholder="Enter a comment here" />
+      <button class="btn btn-pst">Post</button>
+    </section>
+    
+    <div class="overlay hidden"></div>
+  <footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo">Awesome Resturant</h1>
+          
+      <h2>Contact</h2>
+      
+      <address>
+        5534 Somewhere In. The World 22193-10212<br>
+            
+        <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+      </address>
+    </div>
+    
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Media</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Online</a>
+          </li>
+  
+          <li>
+            <a href="#">Print</a>
+          </li>
+              
+          <li>
+            <a href="#">Alternative Ads</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Services</h2>
+        
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="#">Food delivery</a>
+          </li>
+          
+          <li>
+            <a href="#">Fast food</a>
+          </li>
+          
+          <li>
+            <a href="#">Custome food</a>
+          </li>
+          
+          <li>
+            <a href="#">Delivery of foods</a>
+          </li>
+          
+          <li>
+            <a href="#">Packing of foods</a>
+          </li>
+          
+          <li>
+            <a href="#">Online order</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+          
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="legal">
+      <p>&copy; 2023 Something. All rights reserved.</p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
