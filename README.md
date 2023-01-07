@@ -67,7 +67,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Explaining Project Video <a name="project-video">Under Constraction...</a>
+## 🚀 Explaining Project Video <a name="project-video">https://drive.google.com/file/d/1RYCKD4TH2wGO8_fK4P4JL2dnyfrqZ-8F/view?usp=sharing</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
