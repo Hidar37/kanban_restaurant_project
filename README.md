@@ -12,6 +12,8 @@
   - [🛠 Built With](#built-with)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [Kanban Board](#kanban)
+  - [Explaining Project Video](#project-video)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -29,24 +31,27 @@
 
 # 📖 [Kanban Restaurant Project] <a name="about-project"></a>
 
-> This is a project that is using API call for showing which player have the highest score. (Under construction)
+> This project is created for restaurant that people can only give commend and give like to meals that the want. In this project we have used the mealDB API [https://www.themealdb.com/api.php] for displying the items in the page, for like and comment part of the project we have used the Involvement API [https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270]. We have added 7 test cases for this project up to now.
 
 ## 🛠 Built With <a name="built-with"></a>
   <ul>
-    <li><a href="https://reactjs.org/">HTML</a></li>
-    <li><a href="https://reactjs.org/">CSS</a></li>
-    <li><a href="https://reactjs.org/">JS</a></li>
-    <li><a href="https://reactjs.org/">webPack</a></li>
+    <li><a href="https://www.w3schools.com/html">HTML</a></li>
+    <li><a href="https://www.w3schools.com/CSS">CSS</a></li>
+    <li><a href="https://www.w3schools.com/js/">JS</a></li>
+    <li><a href="https://webpack.js.org/">webPack</a></li>
+    <li><a href="https://jestjs.io/">jest for testing</a></li>
+    <li><a href="https://www.themealdb.com/api.php">mealDB API</a></li>
+    <li><a href="https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270">Involvement API</a></li>
   </ul>
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-- **[Adding New Task]**
-- **[Deleting Task]**
-- **[Editing Task]**
-- **[Clear all the completed tasks at once]**
+- **[Display All Items from mealDB API]**
+- **[Add New Comment]**
+- **[Like meals]**
+- **[Display number of like for diffrent Meals]**
+- **[Display number of comments for diffrent Meals]**
 - **[Fully Created with ES6]**
 - **[Fullty tested with jest testing framework]**
 
@@ -55,6 +60,14 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo">https://hidar37.github.io/To-Do-List/dist/</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Kanban Borad <a name="kanban">https://github.com/Hidar37/kanban_restaurant_project/projects/1</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Explaining Project Video <a name="project-video">Under Constraction...</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,18 +87,20 @@ In order to run this project you need:
 ### Setup
 
 - In order to Clone this repository to your PC please follow the below steps:
- > copy this link [https://github.com/Hidar37/To-Do-List.git]
+ > copy this link [https://github.com/Hidar37/kanban_restaurant_project]
  > Open your (cmd) or (git bash) and type [cd desktop] to change the directore and selec the desktop
- > go to your (cmd) or (git bash) and type this commad [git clone <copy the repo link>] the repo will be save to your desktop.
+ > go to your (cmd) or (git bash) and type this command [git clone <copy the repo link>] the repo will be save to your desktop.
+ > run the [npm install]
+ > run [npm start] to see the project in the browser.
 
 ### Usage
 
 To run the project, execute the following command:
 
-> Go to that downloaded folder and open the index.html file and your good to go.
+> Go to that downloaded folder and open the dist/index.html file and your good to go.
 
 ### Run tests
-> 5 Test cases have been used 
+> 7 Test cases have been used 
 > In CMD you can type [ npm test ] in order to see the test cases result.
 
 ### Deployment
@@ -98,7 +113,7 @@ You can deploy this project using:
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors">Haider Ahamd & Fahim Khan</a>
+## 👥 Authors <a name="authors">Haider Ahamd & Habitamu Asimare</a>
 
 > Mention all of the collaborators of this project.
 👤 **Author1**
@@ -107,7 +122,7 @@ You can deploy this project using:
 
 👤 **Author2**
 
-- GitHub: [@Fahim-Khan-P](https://github.com/Fahim-Khan-P)
+- GitHub: [@habasm](https://github.com/habasm)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
