@@ -1,13 +1,16 @@
+import ItemCounter from './API_module/itemCounter.js';
 import MealDbApi from './API_module/mealDB_API.js';
 import './style/style.css';
 
 const mealDB = new MealDbApi();
+const itemCounter = new ItemCounter();
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const closeModalBtn = document.querySelector('.btn-close');
 const urlDataId = 'Lg1NwTSFJSG37nTmEN8x';
 const urlDataPostComments = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${urlDataId}/comments/`;
 const urlDataGetComments = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${urlDataId}/comments?item_id=`;
+const itemCountLocation = document.getElementById('item_count');
 
 // close modal function
 const closeModal = function () {
@@ -189,6 +192,9 @@ const displayItems = () => {
       divLikeTotal.appendChild(likeTotalBox);
       likeTotalBox.appendChild(likeTotal);
     });
+    // Count DIV element in the page.
+    const jan = itemCounter.countItem();
+    itemCountLocation.textContent = jan;
   });
 };
 
