@@ -1,4 +1,4 @@
-import mockcountComments from './commentCounter';
+import mockcountComments from '../commentCounter.js';
 
 const mockArrayComments = [
   { comment: 'Great, food', creation_date: '2023-01-07', username: 'Maria' },
