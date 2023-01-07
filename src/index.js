@@ -37,6 +37,7 @@ const countComments = (commentsObj) => {
   let commentsCounter = 0;
   commentsObj.forEach((element) => {
     commentsCounter += 1;
+    console.log(element);
   });
   counter2.innerHTML = `Number of comments: ${commentsCounter}`;
 };
@@ -100,12 +101,9 @@ const getDataLikes = async (id) => {
   const results3 = await fetch(`${urlDataGetLikes}${id}`);
   const commentsObj = await results3.json();
   commentsObj.forEach((element) => {
-    const item_id = element.item_id;
-    const likes = element.likes;
-    if(id === item_id){ 
-      document.getElementById(`l${id}`).textContent = likes;
+    if (id === element.item_id) {
+      document.getElementById(`l${id}`).textContent = element.likes;
     }
-    
   });
   return commentsObj;
 };
@@ -186,7 +184,7 @@ const displayItems = () => {
 
         getDataComments(e.target.id);
         document.getElementById('ftt').innerHTML = arrayElement.strMeal;
-        document.getElementById('hdvals').value = ids;        
+        document.getElementById('hdvals').value = ids;
       });
       // Like Count
       const divLikeTotal = document.createElement('div');
@@ -194,7 +192,7 @@ const displayItems = () => {
       likeTotalBox.setAttribute('class', 'like-total-box');
       likeTotalBox.textContent = 'Likes ';
       const likeTotal = document.createElement('span');
-      likeTotal.setAttribute('id', 'l'+arrayElement.idMeal+'l');
+      likeTotal.setAttribute('id', `l${arrayElement.idMeal}l`);
       likeTotal.textContent = '...';
       getDataLikes(arrayElement.idMeal);
       // Adding Created Elements in the page
