@@ -7,6 +7,7 @@ const overlay = document.querySelector('.overlay');
 const closeModalBtn = document.querySelector('.btn-close');
 const urlDataId = 'Lg1NwTSFJSG37nTmEN8x';
 const urlDataLikes = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${urlDataId}/likes/`;
+const urlDataGetLikes = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${urlDataId}/likes/?item_id=`;
 const urlDataPostComments = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${urlDataId}/comments/`;
 const urlDataGetComments = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${urlDataId}/comments?item_id=`;
 // close modal function
@@ -36,7 +37,6 @@ const countComments = (commentsObj) => {
   let commentsCounter = 0;
   commentsObj.forEach((element) => {
     commentsCounter += 1;
-    console.log(element);
   });
   counter2.innerHTML = `Number of comments: ${commentsCounter}`;
 };
@@ -82,7 +82,6 @@ const getDataComments = async (id) => {
   const commentsObj = await results3.json();
   injetcCaptureComments(commentsObj, id);
   countComments(commentsObj);
-  console.log(commentsObj);
   return commentsObj;
 };
 
@@ -96,6 +95,35 @@ document.addEventListener('keydown', (e) => {
     closeModal();
   }
 });
+
+const getDataLikes = async (id) => {
+  const results3 = await fetch(`${urlDataGetLikes}${id}`);
+  const commentsObj = await results3.json();
+  commentsObj.forEach((element) => {
+    const item_id = element.item_id;
+    const likes = element.likes;
+    if(id === item_id){ 
+      document.getElementById(`l${id}`).textContent = likes;
+    }
+    
+  });
+  return commentsObj;
+};
+
+const postLike = async (id) => {
+  const response = await fetch(urlDataLikes, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: id,
+    }),
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+    },
+  });
+  getDataLikes(id);
+  const data = await response.text();
+  return data;
+};
 
 // open modal function
 const openModal = function () {
@@ -135,6 +163,7 @@ const displayItems = () => {
       likeBtn.classList.add('fa-heart', 'btn');
       // Add Event for (like) btn
       likeBtn.addEventListener('click', (e) => {
+        postLike(e.target.id);
       });
       // comment
       const commentBox = document.createElement('p');
@@ -157,7 +186,7 @@ const displayItems = () => {
 
         getDataComments(e.target.id);
         document.getElementById('ftt').innerHTML = arrayElement.strMeal;
-        document.getElementById('hdvals').value = ids;
+        document.getElementById('hdvals').value = ids;        
       });
       // Like Count
       const divLikeTotal = document.createElement('div');
@@ -165,9 +194,9 @@ const displayItems = () => {
       likeTotalBox.setAttribute('class', 'like-total-box');
       likeTotalBox.textContent = 'Likes ';
       const likeTotal = document.createElement('span');
-      likeTotal.setAttribute('id', 'like-total');
-      likeTotal.textContent = '5';
-      
+      likeTotal.setAttribute('id', 'l'+arrayElement.idMeal+'l');
+      likeTotal.textContent = '...';
+      getDataLikes(arrayElement.idMeal);
       // Adding Created Elements in the page
       showAllDiv.appendChild(cardDiv);
       cardDiv.append(cardHeader, cardFooter);
