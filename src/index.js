@@ -135,7 +135,7 @@ const openModal = function () {
 // =============================
 const displayItems = () => {
   mealDB.fetchItems().then((itemPromis) => {
-    itemPromis.meals.forEach((arrayElement, index) => {
+    itemPromis.meals.forEach((arrayElement) => {
       const showAllDiv = document.getElementById('card-wrapper');
       // card wrapper
       const cardDiv = document.createElement('div');
@@ -163,7 +163,7 @@ const displayItems = () => {
       likeBtn.classList.add('fa-heart', 'btn');
       // Add Event for (like) btn
       likeBtn.addEventListener('click', (e) => {
-        console.log(e.target.id);
+        postLike(e.target.id);
       });
       // comment
       const commentBox = document.createElement('p');
@@ -194,8 +194,9 @@ const displayItems = () => {
       likeTotalBox.setAttribute('class', 'like-total-box');
       likeTotalBox.textContent = 'Likes ';
       const likeTotal = document.createElement('span');
-      likeTotal.setAttribute('id', 'like-total');
-      likeTotal.textContent = '5';
+      likeTotal.setAttribute('id', 'l'+arrayElement.idMeal+'l');
+      likeTotal.textContent = '...';
+      getDataLikes(arrayElement.idMeal);
       // Adding Created Elements in the page
       showAllDiv.appendChild(cardDiv);
       cardDiv.append(cardHeader, cardFooter);
