@@ -3,6 +3,12 @@ export default class MealDbApi {
     this.gameName = 'Restaurant Game';
   }
 
+  // Count Page Item
+  countItem = () => {
+    const total = document.querySelectorAll('.card');
+    return total;
+  }
+
   // Display all items in the home page
   fetchItems = async () => {
     const items = await fetch(
