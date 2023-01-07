@@ -1,11 +1,11 @@
-/* eslint-disable no-unused-vars */
+export default class ItemCounter {
+  constructor() {
+    this.gameName = 'Restaurant Game';
+  }
 
-const mockcountFoods = (arr) => {
-  let foodCounter = 0;
-  arr.forEach((element) => {
-    foodCounter += 1;
-  });
-  return foodCounter;
-};
-
-export default mockcountFoods;
+  // Count Page Item
+  countItem = () => {
+    const card = document.querySelectorAll('.card');
+    return card.length;
+  }
+}
