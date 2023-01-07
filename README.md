@@ -59,7 +59,6 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo">https://hidar37.github.io/To-Do-List/dist/</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
