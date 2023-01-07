@@ -19,7 +19,6 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [⭐️ Show your support](#support)
@@ -100,12 +99,6 @@ To run the project, execute the following command:
 ### Run tests
 > 7 Test cases have been used 
 > In CMD you can type [ npm test ] in order to see the test cases result.
-
-### Deployment
-
-You can deploy this project using:
-- Github page 
-- Hosting in a web server
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
